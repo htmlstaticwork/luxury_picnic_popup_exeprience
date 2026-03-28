@@ -1,0 +1,223 @@
+/* 
+  Picnique Luxury Experiences - Core Styles
+  Premium UI Design 2026
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+:root {
+  --primary: #D4AF37;
+  --secondary: #FFF9F5;
+  --accent: #F8D7DA;
+  --text-dark: #2D241E;
+  --text-light: #F5F5F5;
+  --bg-dark: #1A1A1A;
+  --card-dark: #2A2A2A;
+  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.01em;
+}
+
+h1, h2, h3, h4, .font-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+/* Global Dark Mode Contrast Fixes */
+.dark body {
+  background-color: var(--bg-dark) !important;
+  color: var(--text-light) !important;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 {
+  color: var(--text-light) !important;
+}
+
+.dark p, .dark .text-gray-500, .dark .text-gray-400 {
+  color: rgba(245, 245, 245, 0.7) !important;
+}
+
+.dark .bg-secondary {
+  background-color: #1A1A1A !important;
+}
+
+.dark .bg-white {
+  background-color: #2A2A2A !important;
+}
+
+.dark .text-text-dark {
+  color: var(--text-light) !important;
+}
+
+/* Smooth Transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 10px;
+}
+
+/* Glassmorphism */
+.glass {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.dark .glass {
+  background: rgba(42, 42, 42, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Header Behavior and Stacking */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9999 !important;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.4s ease;
+}
+
+.dark header {
+  background: rgba(26, 26, 26, 0.9);
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+header a:not(.text-primary):not(.bg-primary) {
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+.dark header a:not(.text-primary):not(.bg-primary) {
+  color: var(--text-light);
+}
+
+header a:not(.text-primary):not(.bg-primary):hover {
+  color: var(--primary);
+}
+
+header #theme-toggle svg,
+header #menu-btn svg {
+  color: var(--text-dark);
+}
+
+.dark header #theme-toggle svg,
+.dark header #menu-btn svg {
+  color: var(--text-light);
+}
+
+/* Sticky Shrink Effect */
+header.sticky-nav {
+  padding: 0.25rem 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* Dashboard & Specific Page Overrides for Solid Headers */
+.header-solid a:not(.text-primary):not(.bg-primary) {
+  color: var(--text-dark) !important;
+}
+.dark .header-solid a:not(.text-primary):not(.bg-primary) {
+  color: var(--text-light) !important;
+}
+
+/* RTL Support for Flex/Grid */
+[dir="rtl"] .ltr-only { display: none; }
+[dir="ltr"] .rtl-only { display: none; }
+
+/* Custom Button */
+.btn-luxury {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  padding: 0.75rem 2.5rem;
+  border-radius: 9999px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 0.025em;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  background: var(--primary);
+  color: white !important;
+  text-decoration: none;
+}
+.btn-luxury:hover {
+  background: #2D241E; /* Midnight accent */
+  color: white !important;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+  transform: translateY(-5px);
+}
+
+/* Hero Text Shadow */
+.text-shadow-premium {
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+}
+
+/* Mobile Nav Overlay */
+#mobile-menu {
+  transition: transform 0.5s ease;
+}
+#mobile-menu.hidden-left {
+  transform: translateX(-100%);
+}
+#mobile-menu.hidden-right {
+  transform: translateX(100%);
+}
+
+/* Scroll To Top */
+#scroll-top {
+  opacity: 0;
+  visibility: hidden;
+  transition: var(--transition);
+}
+#scroll-top.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.logo-text {
+  text-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* --- GLOBAL LUXURY CTA HOVER EFFECTS --- */
+/* Targets all primary background buttons */
+[class*="bg-primary"], .btn-luxury {
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+}
+
+[class*="bg-primary"]:hover, .btn-luxury:hover {
+  transform: translateY(-4px) scale(1.03) !important;
+  filter: brightness(1.1) !important;
+  box-shadow: 0 20px 40px rgba(212, 175, 55, 0.35) !important;
+}
+
+[class*="bg-primary"]:active, .btn-luxury:active {
+  transform: translateY(-1px) scale(0.98) !important;
+}
+
+/* Targets text-based primary links (like 'View Details') */
+a.text-primary, .mobile-link.text-primary {
+  transition: all 0.3s ease;
+}
+
+a.text-primary:hover, .mobile-link.text-primary:hover {
+  letter-spacing: 0.05em;
+  filter: brightness(1.2);
+  text-shadow: 0 0 15px rgba(212, 175, 55, 0.2);
+}
+/* ------------------------------------- */

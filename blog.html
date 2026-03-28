@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Lifestyle Journal | Picnique Luxury Experiences</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4AF37',
+                        secondary: '#FFF9F5',
+                        accent: '#F8D7DA',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body class="bg-secondary dark:bg-[#1A1A1A] text-text-dark dark:text-text-light pt-24 font-sans">
+
+    <!-- Header (Blog active) -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between font-serif">
+            <a href="home1.html" class="flex items-center space-x-2 group">
+                <img src="assets/favicon.svg" alt="Logo" class="h-10 w-10 object-contain">
+                <span class="font-serif text-2xl font-bold text-primary tracking-tight logo-text">Picnique</span>
+            </a>
+            <div class="hidden lg:flex items-center space-x-10 text-sm font-bold uppercase tracking-widest font-sans">
+                <a href="home1.html" class="hover:text-primary transition-all font-sans">Home 1</a>
+                <a href="home2.html" class="hover:text-primary transition-all font-sans">Home 2</a>
+                <a href="about.html" class="hover:text-primary transition-all font-sans">About</a>
+                <a href="blog.html" class="text-primary relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-[1px] after:bg-primary transition-all font-sans">Blog</a>
+                <a href="contact.html" class="hover:text-primary transition-all font-sans">Contact</a>
+            </div>
+            <div class="flex items-center space-x-4 lg:space-x-6">
+                <div class="hidden lg:flex items-center space-x-4 border-r border-gray-200 dark:border-white/10 pr-6 mr-2">
+                    <a href="signup.html" class="px-5 py-2 bg-primary text-white text-[10px] font-bold uppercase tracking-[0.2em] rounded-full hover:shadow-lg transition-all">Sign Up</a>
+                    <a href="dashboard.html" class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-all ml-4">Dashboard</a>
+                </div>
+                <button id="theme-toggle" class="p-2 hover:text-primary transition-colors"></button>
+                <button id="rtl-toggle" class="px-3 py-1 text-xs border border-primary text-primary rounded-full uppercase font-semibold">RTL</button>
+                <button id="menu-btn" class="lg:hidden p-2"><svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg></button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Overlay (Same) -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 dark:bg-black/95 z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-serif translate-x-full transition-transform duration-500 lg:hidden font-sans">
+        <button id="menu-close" class="absolute top-8 right-8 p-2"><svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg></button>
+        <a href="home1.html" class="mobile-link font-sans">Home 1</a>
+        <a href="home2.html" class="mobile-link font-sans">Home 2</a>
+        <a href="about.html" class="mobile-link font-sans">About</a>
+        <a href="blog.html" class="mobile-link text-primary font-sans">Blog</a>
+        <a href="contact.html" class="mobile-link font-sans">Contact</a>
+        <div class="pt-8 flex flex-col items-center space-y-4">
+            <a href="signup.html" class="px-8 py-3 bg-primary text-white rounded-full text-lg font-sans w-full text-center">Sign Up</a>
+            <a href="dashboard.html" class="text-primary text-lg font-sans hover:underline">Dashboard</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="h-[60vh] relative flex items-end px-6 overflow-hidden">
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        <img src="assets/blog-hero.png" class="absolute inset-0 w-full h-full object-cover grayscale-[0.3]">
+        <div class="relative z-20 max-w-7xl mx-auto w-full pb-20 text-white">
+            <span class="text-xs uppercase tracking-widest text-primary font-bold mb-4 block">The Journal</span>
+            <h1 class="text-6xl md:text-8xl font-serif italic mb-4 leading-tight">Art of <br> Hosting</h1>
+            <p class="text-lg opacity-80 max-w-2xl font-sans tracking-tight">Curated thoughts on picnic styling, destination escapes, and the luxury of being present.</p>
+        </div>
+    </section>
+
+    <!-- Category Bar -->
+    <div class="bg-white dark:bg-[#1A1A1A] border-y border-gray-100 dark:border-white/10 sticky top-20 z-40">
+        <div class="max-w-7xl mx-auto px-6 overflow-x-auto">
+            <div class="flex items-center justify-center min-w-[600px] space-x-12 py-6 text-xs uppercase tracking-[0.2em] font-bold">
+                <a href="#" class="text-primary border-b border-primary pb-1">All Posts</a>
+                <a href="#" class="hover:text-primary transition-all">Styling Tips</a>
+                <a href="#" class="hover:text-primary transition-all">Destinations</a>
+                <a href="#" class="hover:text-primary transition-all">Recipes</a>
+                <a href="#" class="hover:text-primary transition-all">Behind the Scenes</a>
+                <a href="#" class="hover:text-primary transition-all">Gift Guides</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content: Blog Grid -->
+    <section class="py-20 px-6 bg-white dark:bg-[#151515]">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+                <!-- Blog Card 1 -->
+                <article class="flex flex-col h-full group">
+                    <div class="overflow-hidden rounded-2xl mb-8 relative aspect-[16/10]">
+                        <img src="assets/theme-boho.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 left-4 py-1 px-3 bg-white/10 backdrop-blur-md rounded-full text-[10px] uppercase font-bold text-white tracking-widest">5 min read</div>
+                    </div>
+                    <div class="flex-grow">
+                        <span class="text-primary text-[10px] uppercase font-black tracking-[0.3em] block mb-3">Styling</span>
+                        <h2 class="text-3xl font-serif mb-6 leading-tight group-hover:text-primary transition-colors cursor-pointer">Creating the Ultimate Boho Picnic Aesthetic</h2>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">From choosing the right jute rugs to the intentional placement of pampas grass, we break down the elements of our most popular theme.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-8 border-t border-gray-100 dark:border-white/5 uppercase text-[10px] font-bold tracking-widest text-[#B4B4B4]">
+                        <span>March 25, 2026</span>
+                        <a href="#" class="text-primary hover:tracking-[0.4em] transition-all">Read More +</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="flex flex-col h-full group">
+                    <div class="overflow-hidden rounded-2xl mb-8 relative aspect-[16/10]">
+                        <img src="assets/theme-romantic.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="flex-grow">
+                        <span class="text-primary text-[10px] uppercase font-black tracking-[0.3em] block mb-3">Destinations</span>
+                        <h2 class="text-3xl font-serif mb-6 leading-tight group-hover:text-primary transition-colors cursor-pointer">5 Coastal Gems You Haven't Explored Yet</h2>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">Exploring the hidden rocky shores of the Pacific Northwest where the mist and the luxury setups create a hauntingly beautiful scene.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-8 border-t border-gray-100 dark:border-white/5 uppercase text-[10px] font-bold tracking-widest text-[#B4B4B4]">
+                        <span>March 12, 2026</span>
+                        <a href="#" class="text-primary hover:tracking-[0.4em] transition-all">Read More +</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 3 -->
+                <article class="flex flex-col h-full group">
+                    <div class="overflow-hidden rounded-2xl mb-8 relative aspect-[16/10]">
+                        <img src="assets/theme-celebration.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="flex-grow">
+                        <span class="text-primary text-[10px] uppercase font-black tracking-[0.3em] block mb-3">Hosting</span>
+                        <h2 class="text-3xl font-serif mb-6 leading-tight group-hover:text-primary transition-colors cursor-pointer">The Art of the Garden Celebration</h2>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">How to turn your own backyard into a gala-worthy setting with simple lighting tricks and bespoke floral arrangements.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-8 border-t border-gray-100 dark:border-white/5 uppercase text-[10px] font-bold tracking-widest text-[#B4B4B4]">
+                        <span>Feb 28, 2026</span>
+                        <a href="#" class="text-primary hover:tracking-[0.4em] transition-all">Read More +</a>
+                    </div>
+                </article>
+
+                <!-- Add more cards as needed -->
+                <!-- Card 4 -->
+                <article class="flex flex-col h-full group">
+                    <div class="overflow-hidden rounded-2xl mb-8 relative aspect-[16/10]">
+                        <img src="assets/home1-hero.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="flex-grow">
+                        <span class="text-primary text-[10px] uppercase font-black tracking-[0.3em] block mb-3">Lifestyle</span>
+                        <h2 class="text-3xl font-serif mb-6 leading-tight group-hover:text-primary transition-colors cursor-pointer">Mindful Picnic: Disconnect to Reconnect</h2>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">Why the digital-free picnic experience is the new luxury for the modern busy professional.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-8 border-t border-gray-100 dark:border-white/5 uppercase text-[10px] font-bold tracking-widest text-[#B4B4B4]">
+                        <span>Feb 15, 2026</span>
+                        <a href="#" class="text-primary hover:tracking-[0.4em] transition-all">Read More +</a>
+                    </div>
+                </article>
+
+                <!-- Card 5 -->
+                <article class="flex flex-col h-full group">
+                    <div class="overflow-hidden rounded-2xl mb-8 relative aspect-[16/10]">
+                        <img src="assets/about-hero.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="flex-grow">
+                        <span class="text-primary text-[10px] uppercase font-black tracking-[0.3em] block mb-3">Planning</span>
+                        <h2 class="text-3xl font-serif mb-6 leading-tight group-hover:text-primary transition-colors cursor-pointer">The Golden Hour: Fall Picnic Guide</h2>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">How to transition your picnic aesthetic for the cooler months with cozy blankets and harvest-inspired menus.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-8 border-t border-gray-100 dark:border-white/5 uppercase text-[10px] font-bold tracking-widest text-[#B4B4B4]">
+                        <span>Jan 30, 2026</span>
+                        <a href="#" class="text-primary hover:tracking-[0.4em] transition-all">Read More +</a>
+                    </div>
+                </article>
+
+                <!-- Card 6 -->
+                <article class="flex flex-col h-full group">
+                    <div class="overflow-hidden rounded-2xl mb-8 relative aspect-[16/10]">
+                        <img src="assets/theme-celebration.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="flex-grow">
+                        <span class="text-primary text-[10px] uppercase font-black tracking-[0.3em] block mb-3">Catering</span>
+                        <h2 class="text-3xl font-serif mb-6 leading-tight group-hover:text-primary transition-colors cursor-pointer">Beyond Charcuterie: Gourmet Menus</h2>
+                        <p class="text-gray-500 text-sm leading-relaxed mb-8">Exploring our new multi-course picnic menus featuring local farm-to-table delicacies and artisanal pairings.</p>
+                    </div>
+                    <div class="flex items-center justify-between pt-8 border-t border-gray-100 dark:border-white/5 uppercase text-[10px] font-bold tracking-widest text-[#B4B4B4]">
+                        <span>Jan 15, 2026</span>
+                        <a href="#" class="text-primary hover:tracking-[0.4em] transition-all">Read More +</a>
+                    </div>
+                </article>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer (Same) -->
+    <footer class="bg-[#2D241E] text-white py-20 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 text-gray-400 text-sm">
+            <div class="space-y-6">
+                <a href="home1.html" class="flex items-center space-x-2">
+                    <img src="assets/favicon.svg" alt="Logo" class="h-8 w-8">
+                    <span class="font-serif text-xl font-bold text-primary tracking-tight">Picnique</span>
+                </a>
+                <p>Crafting extraordinary moments in nature's most beautiful corners. Luxury redefined through curated picnic experiences.</p>
+            </div>
+            <div>
+                <h4 class="text-white font-serif text-lg mb-6">Quick Links</h4>
+                <a href="about.html" class="block mb-4 hover:text-primary">Our Story</a>
+                <a href="blog.html" class="block mb-4 hover:text-primary">Journal</a>
+                <a href="contact.html" class="block hover:text-primary">Help Center</a>
+            </div>
+            <div>
+                <h4 class="text-white font-serif text-lg mb-6">Services</h4>
+                <p class="mb-4">Boho Picnics</p>
+                <p class="mb-4">Proposal Planning</p>
+                <p>Event Styling</p>
+            </div>
+            <div>
+                <h4 class="text-white font-serif text-lg mb-6">Stay Inspired</h4>
+                <p class="mb-6">Newsletter for the latest themes.</p>
+                <form class="flex border-b border-gray-600 pb-2">
+                    <input type="email" placeholder="Email" class="bg-transparent outline-none w-full">
+                    <button type="submit" class="text-primary uppercase font-bold text-xs">Join</button>
+                </form>
+            </div>
+        </div>
+        <div class="text-center pt-16 uppercase tracking-[0.2em] text-[10px] opacity-30">
+            &copy; 2026 Picnique Experiences.
+        </div>
+    </footer>
+
+    <button id="scroll-top" class="fixed bottom-8 right-8 bg-primary p-3 rounded-full text-white shadow-2xl z-50">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11l7-7 7 7M5 19l7-7 7 7"></path></svg>
+    </button>
+
+    <script src="main.js"></script>
+</body>
+</html>

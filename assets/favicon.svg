@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Wicker Basket Base -->
+  <path d="M25 50 Q25 80 50 80 Q75 80 75 50 L25 50 Z" fill="#D4AF37" stroke="#B8962D" stroke-width="2"/>
+  <!-- Basket Handle -->
+  <path d="M25 50 Q25 20 50 20 Q75 20 75 50" fill="none" stroke="#B8962D" stroke-width="3"/>
+  <!-- Fruit Inside -->
+  <circle cx="40" cy="45" r="8" fill="#D4AF37" stroke="#B8962D" stroke-width="1.5"/> <!-- Apple -->
+  <circle cx="60" cy="45" r="8" fill="#D4AF37" stroke="#B8962D" stroke-width="1.5"/> <!-- Apple -->
+  <path d="M50 35 Q50 50 60 50 Q70 50 70 35 L50 35 Z" fill="#D4AF37" stroke="#B8962D" stroke-width="1.5" transform="rotate(-15 50 40)"/> <!-- Pear -->
+</svg>
