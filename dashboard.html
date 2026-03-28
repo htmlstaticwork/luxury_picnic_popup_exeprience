@@ -71,7 +71,7 @@
 
     <div class="flex min-h-screen">
         <!-- Sidebar Navigation -->
-        <aside id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-sidebar-bg border-r border-white/5 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col justify-between py-8">
+        <aside id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-sidebar-bg border-r border-white/5 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col justify-between py-8 text-white">
             <div>
                 <a href="home1.html" class="px-8 mb-12 flex items-center space-x-3 hover:opacity-80 transition-opacity block">
                     <img src="assets/favicon.svg" class="h-10 w-10">
@@ -145,8 +145,8 @@
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <button id="theme-toggle" class="p-3 bg-white/5 rounded-2xl text-gray-400 hover:text-white transition-all flex items-center justify-center min-w-[48px] min-h-[48px]"></button>
-                    <button id="rtl-toggle" class="p-3 bg-white/5 rounded-2xl text-gray-400 hover:text-white transition-all text-[10px] font-black uppercase tracking-widest min-w-[48px] min-h-[48px]">RTL</button>
+                    <button id="theme-toggle" class="p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all flex items-center justify-center min-w-[48px] min-h-[48px]"></button>
+                    <button id="rtl-toggle" class="p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all text-[10px] font-black uppercase tracking-widest min-w-[48px] min-h-[48px]">RTL</button>
                 </div>
             </div>
 
@@ -155,12 +155,12 @@
                 <!-- Stat Cards (Grid of 4) -->
                 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6">
                     <!-- Status Card -->
-                    <div class="bg-card-bg p-8 rounded-[2rem] border border-white/5 flex flex-col justify-between aspect-square lg:aspect-auto min-h-[180px]">
+                    <div class="bg-white dark:bg-card-bg p-8 rounded-[2rem] border border-gray-100 dark:border-white/5 flex flex-col justify-between aspect-square lg:aspect-auto min-h-[180px] shadow-sm dark:shadow-none">
                         <div class="flex items-center space-x-4">
                             <div class="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center text-primary">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
                             </div>
-                            <span class="text-[10px] font-black uppercase tracking-widest opacity-40">Status</span>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-gray-400 dark:text-white/40">Status</span>
                         </div>
                         <div>
                             <h3 class="text-3xl font-bold font-serif italic leading-none">In Review</h3>
@@ -168,12 +168,12 @@
                         </div>
                     </div>
                     <!-- Menu Progress Card -->
-                    <div class="bg-card-bg p-8 rounded-[2rem] border border-white/5 flex flex-col justify-between min-h-[180px]">
+                    <div class="bg-white dark:bg-card-bg p-8 rounded-[2rem] border border-gray-100 dark:border-white/5 flex flex-col justify-between min-h-[180px] shadow-sm dark:shadow-none">
                         <div class="flex items-center space-x-4">
                             <div class="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center text-primary">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
                             </div>
-                            <span class="text-[10px] font-black uppercase tracking-widest opacity-40">Add-ons Selected</span>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-gray-400 dark:text-white/40">Add-ons Selected</span>
                         </div>
                         <div>
                             <div class="flex items-end justify-between mb-4">
@@ -183,12 +183,12 @@
                         </div>
                     </div>
                     <!-- Fees Card -->
-                    <div class="bg-card-bg p-8 rounded-[2rem] border border-white/5 flex flex-col justify-between min-h-[180px]">
+                    <div class="bg-white dark:bg-card-bg p-8 rounded-[2rem] border border-gray-100 dark:border-white/5 flex flex-col justify-between min-h-[180px] shadow-sm dark:shadow-none">
                         <div class="flex items-center space-x-4">
                             <div class="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center text-primary">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path></svg>
                             </div>
-                            <span class="text-[10px] font-black uppercase tracking-widest opacity-40">Total Estimated</span>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-gray-400 dark:text-white/40">Total Estimated</span>
                         </div>
                         <div>
                             <h3 class="text-3xl font-bold font-serif italic leading-none">$1,850</h3>
@@ -196,12 +196,12 @@
                         </div>
                     </div>
                     <!-- Time Card -->
-                    <div class="bg-card-bg p-8 rounded-[2rem] border border-white/5 flex flex-col justify-between min-h-[180px]">
+                    <div class="bg-white dark:bg-card-bg p-8 rounded-[2rem] border border-gray-100 dark:border-white/5 flex flex-col justify-between min-h-[180px] shadow-sm dark:shadow-none">
                         <div class="flex items-center space-x-4">
                             <div class="w-10 h-10 bg-primary/20 rounded-xl flex items-center justify-center text-primary">
                                 <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                             </div>
-                            <span class="text-[10px] font-black uppercase tracking-widest opacity-40">Countdown</span>
+                            <span class="text-[10px] font-black uppercase tracking-widest text-gray-400 dark:text-white/40">Countdown</span>
                         </div>
                         <div>
                             <h3 class="text-3xl font-bold font-serif italic leading-none">12 Days</h3>
@@ -211,8 +211,8 @@
                 </div>
 
                 <!-- Curation Milestones Area (Timeline) -->
-                <div class="bg-card-bg rounded-[3rem] border border-white/5 p-8 md:p-12">
-                    <div class="flex items-center space-x-4 mb-10 pb-6 border-b border-white/5">
+                <div class="bg-white dark:bg-card-bg rounded-[3rem] border border-gray-100 dark:border-white/5 p-8 md:p-12 shadow-sm dark:shadow-none">
+                    <div class="flex items-center space-x-4 mb-10 pb-6 border-b border-gray-100 dark:border-white/5">
                         <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         <h3 class="text-2xl font-serif italic">Planning Milestones</h3>
                     </div>
@@ -234,7 +234,7 @@
 
                         <!-- Milestone 2 (In Progress) -->
                         <div class="relative flex items-start space-x-8 lg:space-x-12">
-                            <div class="w-8 h-8 rounded-full border-2 border-primary/20 bg-dark-bg flex items-center justify-center z-10 shrink-0 relative overflow-hidden">
+                            <div class="w-8 h-8 rounded-full border-2 border-primary/20 bg-white dark:bg-dark-bg flex items-center justify-center z-10 shrink-0 relative overflow-hidden">
                                 <div class="w-3 h-3 bg-primary rounded-full animate-ping opacity-75"></div>
                             </div>
                             <div class="pb-2">
@@ -246,7 +246,7 @@
 
                          <!-- Milestone 3 (Upcoming) -->
                          <div class="relative flex items-start space-x-8 lg:space-x-12 opacity-30 group">
-                            <div class="w-8 h-8 rounded-full border-2 border-white/10 bg-dark-bg z-10 shrink-0"></div>
+                            <div class="w-8 h-8 rounded-full border-2 border-gray-200 dark:border-white/10 bg-white dark:bg-dark-bg z-10 shrink-0"></div>
                             <div class="pb-2">
                                 <h4 class="text-xl font-bold font-serif mb-1">Atmosphere Logistics</h4>
                                 <p class="text-xs text-gray-500 leading-relaxed">Floral arrangement and textiles dispatching.</p>
@@ -265,7 +265,7 @@
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
                     <!-- Theme 1 -->
-                    <div class="group bg-card-bg rounded-[2.5rem] overflow-hidden border border-white/5 hover:border-primary transition-all duration-500">
+                    <div class="group bg-white dark:bg-card-bg rounded-[2.5rem] overflow-hidden border border-gray-100 dark:border-white/5 hover:border-primary transition-all duration-500 shadow-sm dark:shadow-none">
                         <div class="relative aspect-[4/5] overflow-hidden">
                             <img src="assets/theme-boho.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-75">
                             <div class="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-dark-bg/90 to-transparent">
@@ -275,7 +275,7 @@
                         </div>
                     </div>
                     <!-- Theme 2 -->
-                    <div class="group bg-card-bg rounded-[2.5rem] overflow-hidden border border-white/5 hover:border-primary transition-all duration-500">
+                    <div class="group bg-white dark:bg-card-bg rounded-[2.5rem] overflow-hidden border border-gray-100 dark:border-white/5 hover:border-primary transition-all duration-500 shadow-sm dark:shadow-none">
                         <div class="relative aspect-[4/5] overflow-hidden">
                             <img src="assets/theme-romantic.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-75">
                             <div class="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-dark-bg/90 to-transparent">
@@ -285,7 +285,7 @@
                         </div>
                     </div>
                     <!-- Theme 3 -->
-                    <div class="group bg-card-bg rounded-[2.5rem] overflow-hidden border border-white/5 hover:border-primary transition-all duration-500">
+                    <div class="group bg-white dark:bg-card-bg rounded-[2.5rem] overflow-hidden border border-gray-100 dark:border-white/5 hover:border-primary transition-all duration-500 shadow-sm dark:shadow-none">
                         <div class="relative aspect-[4/5] overflow-hidden">
                             <img src="assets/theme-modern.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-75">
                             <div class="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-dark-bg/90 to-transparent">
@@ -303,15 +303,15 @@
                     <h2 class="text-4xl font-serif italic mb-2">Event Logistics</h2>
                     <p class="text-gray-500">Secure your date and preferred sanctuary.</p>
                 </div>
-                <div class="bg-card-bg p-12 rounded-[3.5rem] border border-white/5">
+                <div class="bg-white dark:bg-card-bg p-12 rounded-[3.5rem] border border-gray-100 dark:border-white/5 shadow-sm dark:shadow-none">
                     <form class="grid grid-cols-1 md:grid-cols-2 gap-10">
                         <div class="space-y-4">
                             <label class="text-[10px] font-black uppercase tracking-widest text-primary">Preferred Date</label>
-                            <input type="date" class="w-full bg-dark-bg border border-white/10 rounded-2xl p-4 text-white focus:border-primary outline-none">
+                            <input type="date" class="w-full bg-gray-50 dark:bg-dark-bg border border-gray-100 dark:border-white/10 rounded-2xl p-4 text-dark-bg dark:text-white focus:border-primary outline-none">
                         </div>
                         <div class="space-y-4">
                             <label class="text-[10px] font-black uppercase tracking-widest text-primary">Guest Count</label>
-                            <select class="w-full bg-dark-bg border border-white/10 rounded-2xl p-4 text-white focus:border-primary outline-none">
+                            <select class="w-full bg-gray-50 dark:bg-dark-bg border border-gray-100 dark:border-white/10 rounded-2xl p-4 text-dark-bg dark:text-white focus:border-primary outline-none">
                                 <option>Intimate (2-4 Guests)</option>
                                 <option>Boutique (5-10 Guests)</option>
                                 <option>Gala (11+ Guests)</option>
@@ -319,7 +319,7 @@
                         </div>
                         <div class="space-y-4 md:col-span-2">
                             <label class="text-[10px] font-black uppercase tracking-widest text-primary">Special Celebration Details</label>
-                            <textarea placeholder="Tell us about the occasion..." class="w-full bg-dark-bg border border-white/10 rounded-2xl p-6 text-white focus:border-primary outline-none h-40"></textarea>
+                            <textarea placeholder="Tell us about the occasion..." class="w-full bg-gray-50 dark:bg-dark-bg border border-gray-100 dark:border-white/10 rounded-2xl p-6 text-dark-bg dark:text-white focus:border-primary outline-none h-40"></textarea>
                         </div>
                         <button class="md:col-span-2 py-5 bg-primary text-white font-black uppercase tracking-[0.2em] rounded-full hover:shadow-2xl transition-all">Check Availability</button>
                     </form>
@@ -338,10 +338,10 @@
                 
                 <div class="space-y-6">
                     <!-- Appetizer Category -->
-                    <div class="bg-card-bg p-8 rounded-[2.5rem] border border-white/5 group hover:border-primary/30 transition-all">
+                    <div class="bg-white dark:bg-card-bg p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 group hover:border-primary/30 transition-all shadow-sm dark:shadow-none">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-6">
-                                <div class="w-16 h-16 rounded-2xl bg-dark-bg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                <div class="w-16 h-16 rounded-2xl bg-gray-50 dark:bg-dark-bg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
                                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
                                 </div>
                                 <div>
@@ -349,16 +349,16 @@
                                     <p class="text-sm text-gray-500">Charcuterie, gourmet cheeses, and seasonal fruits.</p>
                                 </div>
                             </div>
-                            <button class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+                            <button class="w-10 h-10 border border-gray-200 dark:border-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
                             </button>
                         </div>
                     </div>
                     <!-- Main Category -->
-                    <div class="bg-card-bg p-8 rounded-[2.5rem] border border-white/5 group hover:border-primary/30 transition-all">
+                    <div class="bg-white dark:bg-card-bg p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 group hover:border-primary/30 transition-all shadow-sm dark:shadow-none">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-6">
-                                <div class="w-16 h-16 rounded-2xl bg-dark-bg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                <div class="w-16 h-16 rounded-2xl bg-gray-50 dark:bg-dark-bg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
                                     <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                                 </div>
                                 <div>
@@ -366,7 +366,7 @@
                                     <p class="text-sm text-gray-500">Prawns, avocado, and citrus vinaigrette.</p>
                                 </div>
                             </div>
-                            <button class="w-10 h-10 border border-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
+                            <button class="w-10 h-10 border border-gray-200 dark:border-white/10 rounded-full flex items-center justify-center hover:bg-primary hover:border-primary transition-all">
                                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M12 4v16m8-8H4"></path></svg>
                             </button>
                         </div>
@@ -383,8 +383,8 @@
 
                 <div class="grid grid-cols-1 xl:grid-cols-2 gap-8">
                     <!-- Profile Management -->
-                    <div class="bg-card-bg p-10 rounded-[2.5rem] border border-white/5">
-                        <h3 class="text-xl font-serif italic mb-8 pb-4 border-b border-white/5">Personal Information</h3>
+                    <div class="bg-white dark:bg-card-bg p-10 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm dark:shadow-none">
+                        <h3 class="text-xl font-serif italic mb-8 pb-4 border-b border-gray-100 dark:border-white/5">Personal Information</h3>
                         <div class="space-y-6">
                             <div class="flex items-center space-x-6">
                                 <div class="relative w-24 h-24 rounded-full overflow-hidden border-4 border-primary/20">
@@ -393,24 +393,24 @@
                                         <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path></svg>
                                     </div>
                                 </div>
-                                <button class="px-5 py-2 border border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all">Change Photo</button>
+                                <button class="px-5 py-2 border border-gray-200 dark:border-white/10 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-dark-bg hover:text-white dark:hover:bg-white dark:hover:text-black transition-all">Change Photo</button>
                             </div>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
                                     <label class="text-[10px] uppercase font-bold text-gray-500">Full Name</label>
-                                    <input type="text" value="John Doe" class="w-full bg-dark-bg border border-white/5 rounded-xl p-3 text-sm outline-none focus:border-primary">
+                                    <input type="text" value="John Doe" class="w-full bg-gray-50 dark:bg-dark-bg border border-gray-100 dark:border-white/5 rounded-xl p-3 text-sm outline-none focus:border-primary text-dark-bg dark:text-white">
                                 </div>
                                 <div class="space-y-2">
                                     <label class="text-[10px] uppercase font-bold text-gray-500">Email Address</label>
-                                    <input type="email" value="john.doe@curation.com" class="w-full bg-dark-bg border border-white/5 rounded-xl p-3 text-sm outline-none focus:border-primary">
+                                    <input type="email" value="john.doe@curation.com" class="w-full bg-gray-50 dark:bg-dark-bg border border-gray-100 dark:border-white/5 rounded-xl p-3 text-sm outline-none focus:border-primary text-dark-bg dark:text-white">
                                 </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Notification Toggles -->
-                    <div class="bg-card-bg p-10 rounded-[2.5rem] border border-white/5">
-                        <h3 class="text-xl font-serif italic mb-8 pb-4 border-b border-white/5">Communication</h3>
+                    <div class="bg-white dark:bg-card-bg p-10 rounded-[2.5rem] border border-gray-100 dark:border-white/5 shadow-sm dark:shadow-none">
+                        <h3 class="text-xl font-serif italic mb-8 pb-4 border-b border-gray-100 dark:border-white/5">Communication</h3>
                         <div class="space-y-8">
                             <div class="flex items-center justify-between">
                                 <div>
@@ -434,11 +434,11 @@
                     </div>
 
                     <!-- Security -->
-                    <div class="bg-card-bg p-10 rounded-[2.5rem] border border-white/5 xl:col-span-2">
-                        <h3 class="text-xl font-serif italic mb-8 pb-4 border-b border-white/5">Security & Access</h3>
+                    <div class="bg-white dark:bg-card-bg p-10 rounded-[2.5rem] border border-gray-100 dark:border-white/5 xl:col-span-2 shadow-sm dark:shadow-none">
+                        <h3 class="text-xl font-serif italic mb-8 pb-4 border-b border-gray-100 dark:border-white/5">Security & Access</h3>
                         <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
-                            <p class="text-sm text-gray-400">Your password was last changed <span class="text-white font-bold">42 days ago</span>.</p>
-                            <button class="px-8 py-3 bg-white/5 border border-white/10 rounded-full text-xs font-black uppercase tracking-widest hover:bg-primary hover:text-white hover:border-primary transition-all">Update Password</button>
+                            <p class="text-sm text-gray-500 dark:text-gray-400">Your password was last changed <span class="text-dark-bg dark:text-white font-bold">42 days ago</span>.</p>
+                            <button class="px-8 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-xs font-black uppercase tracking-widest hover:bg-primary hover:text-white hover:border-primary transition-all text-dark-bg dark:text-white">Update Password</button>
                         </div>
                     </div>
                 </div>
