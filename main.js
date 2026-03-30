@@ -118,7 +118,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
         menuBtn.addEventListener('click', toggleMenu);
         if (menuClose) menuClose.addEventListener('click', closeMenu);
-        menuLinks.forEach(link => link.addEventListener('click', closeMenu));
+        
+        // Close menu when any link inside mobileMenu is clicked
+        const allMobileLinks = mobileMenu.querySelectorAll('a');
+        allMobileLinks.forEach(link => link.addEventListener('click', closeMenu));
     }
 
     // ---------------------------------------------------------
