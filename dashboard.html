@@ -15,6 +15,7 @@
                         'dark-bg': '#0A0E17',
                         'card-bg': '#141A26',
                         'sidebar-bg': '#0D121D',
+                        'sidebar-light': '#FFFFFF',
                     },
                     fontFamily: {
                         serif: ['Playfair Display', 'serif'],
@@ -30,8 +31,9 @@
     <style>
         .sidebar-link.active {
             background-color: rgba(212, 175, 55, 0.1);
-            border-left: 4px solid #D4AF37;
-            color: #D4AF37;
+            border-left: 4px solid #D4AF37 !important;
+            color: #D4AF37 !important;
+            opacity: 1 !important;
         }
         .progress-bar {
             height: 4px;
@@ -65,47 +67,47 @@
             <span class="font-serif font-bold text-primary tracking-widest uppercase">Picnique</span>
         </a>
         <button id="mobile-sidebar-toggle" class="p-2 text-white">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
         </button>
     </div>
 
     <div class="flex min-h-screen">
         <!-- Sidebar Navigation -->
-        <aside id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-sidebar-bg border-r border-white/5 z-50 transform -translate-x-full lg:translate-x-0 transition-transform duration-300 flex flex-col justify-between py-8 text-white">
+        <aside id="sidebar" class="fixed inset-y-0 left-0 w-64 bg-white dark:bg-sidebar-bg border-r border-gray-100 dark:border-white/5 z-50 transform -translate-x-full lg:translate-x-0 transition-all duration-300 flex flex-col justify-between py-8 text-gray-500 dark:text-white">
             <div>
-                <a href="index.html" class="px-8 mb-12 flex items-center space-x-3 hover:opacity-80 transition-opacity block">
+                <a href="index.html" class="px-8 mb-12 flex items-center space-x-3 hover:opacity-80 transition-opacity block text-dark-bg dark:text-white">
                     <img src="assets/favicon.svg" class="h-10 w-10">
                     <span class="font-serif font-bold text-xl text-primary tracking-widest uppercase">Picnique</span>
                 </a>
 
-                <nav class="space-y-4 px-4">
+                <nav class="space-y-4 px-4 text-gray-500 dark:text-white">
                     <button onclick="switchTab('dashboard')" class="sidebar-link active w-full flex items-center space-x-4 px-4 py-3 rounded-xl transition-all" data-tab="dashboard">
                         <svg class="w-5 h-5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z"></path></svg>
-                        <span class="text-sm font-medium">Dashboard</span>
+                        <span class="text-sm font-bold">Dashboard</span>
                     </button>
-                    <button onclick="switchTab('themes')" class="sidebar-link w-full flex items-center space-x-4 px-4 py-3 rounded-xl transition-all opacity-60 hover:opacity-100" data-tab="themes">
+                    <button onclick="switchTab('themes')" class="sidebar-link w-full flex items-center space-x-4 px-4 py-3 rounded-xl transition-all opacity-60 hover:opacity-100 text-left" data-tab="themes">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path></svg>
-                        <span class="text-sm font-medium text-left">Browse Themes</span>
+                        <span class="text-sm font-bold">Browse Themes</span>
                     </button>
-                    <button onclick="switchTab('booking')" class="sidebar-link w-full flex items-center space-x-4 px-4 py-3 rounded-xl transition-all opacity-60 hover:opacity-100" data-tab="booking">
+                    <button onclick="switchTab('booking')" class="sidebar-link w-full flex items-center space-x-4 px-4 py-3 rounded-xl transition-all opacity-60 hover:opacity-100 text-left" data-tab="booking">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
-                        <span class="text-sm font-medium text-left">Book Now</span>
+                        <span class="text-sm font-bold">Book Now</span>
                     </button>
-                    <button onclick="switchTab('menu')" class="sidebar-link w-full flex items-center space-x-4 px-4 py-3 rounded-xl transition-all opacity-60 hover:opacity-100" data-tab="menu">
+                    <button onclick="switchTab('menu')" class="sidebar-link w-full flex items-center space-x-4 px-4 py-3 rounded-xl transition-all opacity-60 hover:opacity-100 text-left" data-tab="menu">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
-                        <span class="text-sm font-medium text-left">Customize Menu</span>
+                        <span class="text-sm font-bold">Customize Menu</span>
                     </button>
-                    <button onclick="switchTab('settings')" class="sidebar-link w-full flex items-center space-x-4 px-4 py-3 rounded-xl transition-all opacity-60 hover:opacity-100" data-tab="settings">
+                    <button onclick="switchTab('settings')" class="sidebar-link w-full flex items-center space-x-4 px-4 py-3 rounded-xl transition-all opacity-60 hover:opacity-100 text-left" data-tab="settings">
                         <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
-                        <span class="text-sm font-medium">Settings</span>
+                        <span class="text-sm font-bold">Settings</span>
                     </button>
                 </nav>
             </div>
 
             <div class="px-6 space-y-6">
                 <!-- Alerts Toggle Card -->
-                <div class="bg-white/5 rounded-2xl p-4 flex flex-col justify-between space-y-4">
-                    <span class="text-[10px] uppercase font-bold opacity-40">Alerts</span>
+                <div class="bg-gray-50 dark:bg-white/5 rounded-2xl p-4 flex flex-col justify-between space-y-4">
+                    <span class="text-[10px] uppercase font-bold text-gray-400 dark:opacity-40">Alerts</span>
                     <div class="flex items-center justify-between">
                          <div class="w-10 h-5 bg-primary/20 rounded-full relative p-1 cursor-pointer">
                             <div class="w-3 h-3 bg-primary rounded-full absolute right-1"></div>
@@ -114,13 +116,13 @@
                 </div>
 
                 <!-- User Profile Info -->
-                <div class="flex items-center space-x-3 pt-4 border-t border-white/5">
+                <div class="flex items-center space-x-3 pt-4 border-t border-gray-100 dark:border-white/5 text-dark-bg dark:text-white">
                     <div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
                         <img src="https://i.pravatar.cc/150?u=johndoe" class="w-full h-full object-cover">
                     </div>
                     <div>
                         <h4 class="text-sm font-bold">John Doe</h4>
-                        <p class="text-[10px] text-gray-500 uppercase tracking-widest leading-none">Elite Member</p>
+                        <p class="text-[10px] text-gray-400 dark:text-gray-500 uppercase tracking-widest leading-none">Elite Member</p>
                     </div>
                 </div>
 
@@ -145,8 +147,8 @@
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <button id="theme-toggle" class="p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all flex items-center justify-center min-w-[48px] min-h-[48px]"></button>
-                    <button id="rtl-toggle" class="p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all text-[10px] font-black uppercase tracking-widest min-w-[48px] min-h-[48px]">RTL</button>
+                    <button id="theme-toggle" class="theme-toggle hidden xl:block p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all flex items-center justify-center min-w-[48px] min-h-[48px]"></button>
+                    <button id="rtl-toggle" class="rtl-toggle hidden xl:block p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all text-[10px] font-black uppercase tracking-widest min-w-[48px] min-h-[48px]">RTL</button>
                 </div>
             </div>
 
@@ -287,7 +289,7 @@
                     <!-- Theme 3 -->
                     <div class="group bg-white dark:bg-card-bg rounded-[2.5rem] overflow-hidden border border-gray-100 dark:border-white/5 hover:border-primary transition-all duration-500 shadow-sm dark:shadow-none">
                         <div class="relative aspect-[4/5] overflow-hidden">
-                            <img src="assets/theme-modern.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-75">
+                            <img src="assets/theme-celebration.png" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 brightness-75">
                             <div class="absolute inset-x-0 bottom-0 p-8 bg-gradient-to-t from-dark-bg/90 to-transparent">
                                 <h4 class="text-2xl font-serif italic text-white mb-2">Modern Minimal</h4>
                                 <button class="px-6 py-2 bg-primary text-white text-[10px] font-black uppercase tracking-widest rounded-full opacity-0 group-hover:opacity-100 transition-all translate-y-4 group-hover:translate-y-0">Select Theme</button>

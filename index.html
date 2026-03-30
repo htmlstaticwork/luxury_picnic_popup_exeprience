@@ -38,37 +38,38 @@
             <!-- Logo -->
             <a href="index.html" class="flex items-center space-x-2 group shrink-0">
                 <img src="assets/favicon.svg" alt="Picnique Logo" class="h-10 w-10 object-contain group-hover:scale-110 transition-transform">
-                <span class="font-serif text-2xl font-bold text-primary tracking-tight logo-text hidden min-[400px]:inline-block">Picnique</span>
+                <span class="font-serif text-2xl font-bold text-primary tracking-tight logo-text">Picnique</span>
             </a>
 
-            <div class="hidden lg:flex items-center space-x-10 text-sm font-bold uppercase tracking-widest">
+            <div class="hidden xl:flex items-center space-x-4 lg:space-x-6 xl:space-x-10 text-sm font-bold uppercase tracking-widest whitespace-nowrap">
                 <a href="index.html" class="text-primary relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-[1px] after:bg-primary transition-all">Home 1</a>
                 <a href="home2.html" class="hover:text-primary transition-all">Home 2</a>
                 <a href="about.html" class="hover:text-primary transition-all">About</a>
                 <a href="gallery.html" class="hover:text-primary transition-all">Gallery</a>
+                <a href="pricing.html" class="hover:text-primary transition-all">Pricing</a>
                 <a href="contact.html" class="hover:text-primary transition-all">Contact</a>
+                <a href="dashboard.html" class="hover:text-primary transition-all">Dashboard</a>
             </div>
 
             <div class="flex items-center space-x-4 lg:space-x-4">
-                <div class="hidden lg:flex items-center space-x-6 border-r border-gray-200 dark:border-white/10 pr-6 mr-2">
-                    <a href="signup.html" class="px-6 py-2.5 bg-primary text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-full hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all">Sign Up</a>
-                    <a href="dashboard.html" class="text-xs font-bold uppercase tracking-widest hover:text-primary transition-all ml-4">Dashboard</a>
+                <div class="hidden xl:flex items-center space-x-6 border-r border-gray-200 dark:border-white/10 pr-6 mr-2">
+                    <a href="signup.html" class="px-6 py-2.5 bg-primary text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-full hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all whitespace-nowrap">Sign Up</a>
                 </div>
-                <button id="theme-toggle" class="p-2 hover:text-primary transition-colors">
+                <button id="theme-toggle" class="theme-toggle hidden xl:block p-2 hover:text-primary transition-colors">
                     <!-- Icon auto-populated by JS -->
                 </button>
-                <button id="rtl-toggle" class="px-3 py-1 text-xs border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all uppercase font-semibold">
+                <button id="rtl-toggle" class="rtl-toggle hidden xl:block px-3 py-1 text-xs border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all uppercase font-semibold">
                     RTL
                 </button>
-                <button id="menu-btn" class="lg:hidden p-2">
-                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+                <button id="menu-btn" class="xl:hidden p-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
                 </button>
             </div>
         </nav>
     </header>
 
     <!-- Mobile Navigation Overlay (Right Slide) -->
-    <div id="mobile-menu" class="fixed inset-0 bg-white/95 dark:bg-black/95 z-[60] flex flex-col items-center justify-center space-y-8 text-2xl font-serif translate-x-full transition-transform duration-500 lg:hidden font-sans">
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 dark:bg-black/95 z-[60] flex flex-col items-center justify-start py-20 overflow-y-auto space-y-6 text-xl font-serif translate-x-full transition-transform duration-500 xl:hidden font-sans">
         <button id="menu-close" class="absolute top-8 right-8 p-2">
             <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
         </button>
@@ -76,10 +77,17 @@
         <a href="home2.html" class="mobile-link">Home 2</a>
         <a href="about.html" class="mobile-link">About</a>
         <a href="gallery.html" class="mobile-link">Gallery</a>
+        <a href="pricing.html" class="mobile-link">Pricing</a>
         <a href="contact.html" class="mobile-link">Contact</a>
+        <a href="dashboard.html" class="mobile-link">Dashboard</a>
+        
+        <!-- Toggles (Mobile View) -->
+        <div class="flex items-center space-x-6 py-4">
+            <button class="theme-toggle p-2 hover:text-primary transition-colors"></button>
+            <button class="rtl-toggle px-4 py-1.5 text-sm border border-primary text-primary rounded-full uppercase font-semibold">RTL</button>
+        </div>
         <div class="pt-8 flex flex-col items-center space-y-4">
-            <a href="signup.html" class="px-8 py-3 bg-primary text-white rounded-full text-lg font-sans w-full text-center">Sign Up</a>
-            <a href="dashboard.html" class="text-primary text-lg font-sans hover:underline">Dashboard</a>
+            <a href="signup.html" class="px-8 py-3 bg-primary text-white rounded-full text-lg font-sans w-full text-center mt-4">Sign Up</a>
         </div>
     </div>
 
@@ -104,7 +112,7 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4">
                 <a href="dashboard.html" class="btn-luxury inline-block text-center shadow-2xl">Book Experience</a>
-                <a href="#services" class="px-8 py-3 rounded-full border border-white/40 backdrop-blur-md hover:bg-white hover:text-black transition-all inline-block font-medium">Explore Themes</a>
+                <a href="pricing.html" class="px-8 py-3 rounded-full border border-white/40 backdrop-blur-md hover:bg-white hover:text-black transition-all inline-block font-medium">Explore Themes</a>
             </div>
         </div>
     </section>
@@ -117,32 +125,38 @@
                 <div class="w-20 h-1 bg-primary mx-auto"></div>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <div class="group cursor-pointer">
-                    <div class="overflow-hidden rounded-2xl mb-6 relative aspect-[4/5]">
+                <div class="group cursor-pointer text-center flex flex-col h-full">
+                    <div class="overflow-hidden rounded-2xl mb-6 relative aspect-[4/5] w-full">
                         <img src="assets/theme-boho.png" alt="Boho Style" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"></div>
                     </div>
                     <h3 class="text-2xl font-serif mb-3">Boho Chic</h3>
                     <p class="text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">Artisanal textures, low wooden tables, and pampas grass for a relaxed yet elevated vibe.</p>
-                    <a href="#" class="text-primary font-bold uppercase text-xs tracking-widest border-b border-primary/30 pb-1">View Details</a>
+                    <div class="mt-auto">
+                        <a href="pricing.html" class="inline-block text-primary font-bold uppercase text-xs tracking-widest border-b border-primary/30 pb-1">View Details</a>
+                    </div>
                 </div>
-                <div class="group cursor-pointer">
-                    <div class="overflow-hidden rounded-2xl mb-6 relative aspect-[4/5]">
+                <div class="group cursor-pointer text-center flex flex-col h-full">
+                    <div class="overflow-hidden rounded-2xl mb-6 relative aspect-[4/5] w-full">
                         <img src="assets/theme-romantic.png" alt="Romantic Style" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"></div>
                     </div>
                     <h3 class="text-2xl font-serif mb-3">Romantic Escape</h3>
                     <p class="text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">Dozens of candles, plush velvets, and premium sparkling wine for those intimate moments.</p>
-                    <a href="#" class="text-primary font-bold uppercase text-xs tracking-widest border-b border-primary/30 pb-1">View Details</a>
+                    <div class="mt-auto">
+                        <a href="pricing.html" class="inline-block text-primary font-bold uppercase text-xs tracking-widest border-b border-primary/30 pb-1">View Details</a>
+                    </div>
                 </div>
-                <div class="group cursor-pointer">
-                    <div class="overflow-hidden rounded-2xl mb-6 relative aspect-[4/5]">
+                <div class="group cursor-pointer text-center flex flex-col h-full">
+                    <div class="overflow-hidden rounded-2xl mb-6 relative aspect-[4/5] w-full">
                         <img src="assets/theme-celebration.png" alt="Celebration Style" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
                         <div class="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-all"></div>
                     </div>
                     <h3 class="text-2xl font-serif mb-3">Celebration Soirée</h3>
                     <p class="text-gray-500 dark:text-gray-400 mb-4 leading-relaxed">Vibrant colors, festive balloons, and bespoke cakes for birthdays and anniversaries.</p>
-                    <a href="#" class="text-primary font-bold uppercase text-xs tracking-widest border-b border-primary/30 pb-1">View Details</a>
+                    <div class="mt-auto">
+                        <a href="pricing.html" class="inline-block text-primary font-bold uppercase text-xs tracking-widest border-b border-primary/30 pb-1">View Details</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -205,11 +219,31 @@
                 </div>
                 <a href="#" class="mt-6 md:mt-0 px-8 py-3 border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all uppercase text-xs tracking-widest font-bold">Follow @PicnicLuxury</a>
             </div>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <img src="assets/theme-boho.png" class="w-full h-[300px] object-cover rounded-xl hover:opacity-80 transition-all cursor-pointer">
-                <img src="assets/theme-romantic.png" class="w-full h-[400px] object-cover rounded-xl hover:opacity-80 transition-all cursor-pointer md:mt-12">
-                <img src="assets/theme-celebration.png" class="w-full h-[300px] object-cover rounded-xl hover:opacity-80 transition-all cursor-pointer">
-                <img src="assets/home1-hero.png" class="w-full h-[400px] object-cover rounded-xl hover:opacity-80 transition-all cursor-pointer md:mt-12">
+            <!-- CSS Masonry Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6 pb-8 items-start">
+                <!-- Image 1: Top Left - Spans full width on tablet -->
+                <div class="relative group overflow-hidden rounded-2xl md:rounded-[2rem] shadow-lg border border-gray-100/10 inline-block w-full md:col-span-2 lg:col-span-1">
+                    <img src="assets/theme-boho.png" class="w-full h-[320px] md:h-[400px] object-cover hover:scale-110 transition-transform duration-700 cursor-pointer">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all"></div>
+                </div>
+
+                <!-- Image 2: Bottom Left -->
+                <div class="relative group overflow-hidden rounded-2xl md:rounded-[2rem] shadow-lg border border-gray-100/10 inline-block w-full">
+                    <img src="assets/theme-celebration.png" class="w-full h-[320px] md:h-[400px] object-cover hover:scale-110 transition-transform duration-700 cursor-pointer">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all"></div>
+                </div>
+
+                <!-- Image 3: Top Right -->
+                <div class="relative group overflow-hidden rounded-2xl md:rounded-[2rem] shadow-lg border border-gray-100/10 inline-block w-full">
+                    <img src="assets/theme-romantic.png" class="w-full h-[320px] md:h-[400px] object-cover hover:scale-110 transition-transform duration-700 cursor-pointer">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all"></div>
+                </div>
+
+                <!-- Image 4: Bottom Right -->
+                <div class="relative group overflow-hidden rounded-2xl md:rounded-[2rem] shadow-lg border border-gray-100/10 inline-block w-full">
+                    <img src="assets/home1-hero.png" class="w-full h-[320px] md:h-[400px] object-cover hover:scale-110 transition-transform duration-700 cursor-pointer">
+                    <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -241,41 +275,47 @@
                 <p class="text-gray-500 max-w-lg mx-auto italic">Insights into the world of luxury outdoor hosting and picnic styling tips.</p>
             </div>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                <article class="group">
-                    <div class="overflow-hidden rounded-xl mb-6 relative">
+                <article class="group text-center flex flex-col h-full">
+                    <div class="overflow-hidden rounded-xl mb-6 relative w-full">
                         <img src="assets/blog-hero.png" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <span class="text-xs uppercase text-primary font-bold tracking-widest mb-2 block">Inspiration</span>
-                    <h3 class="text-2xl font-serif mb-4 hover:text-primary transition-colors cursor-pointer">Top 5 Hidden Gems for Sunset Picnics</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm line-clamp-2">Discover the most secluded and picturesque spots we've found for your next romantic escape...</p>
-                    <a href="gallery.html" class="flex items-center space-x-2 text-primary font-bold uppercase text-xs tracking-widest group">
-                        <span>Read More</span>
-                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
+                    <span class="text-xs uppercase text-primary font-bold tracking-widest mb-2 block w-full">Inspiration</span>
+                    <h3 class="text-2xl font-serif mb-4 hover:text-primary transition-colors cursor-pointer mx-auto">Top 5 Hidden Gems for Sunset Picnics</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm line-clamp-2 mx-auto max-w-md">Discover the most secluded and picturesque spots we've found for your next romantic escape...</p>
+                    <div class="mt-auto">
+                        <a href="gallery.html" class="inline-flex items-center space-x-2 text-primary font-bold uppercase text-xs tracking-widest group">
+                            <span>Read More</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
                 </article>
-                <article class="group">
-                    <div class="overflow-hidden rounded-xl mb-6 relative">
+                <article class="group text-center flex flex-col h-full">
+                    <div class="overflow-hidden rounded-xl mb-6 relative w-full">
                         <img src="assets/theme-boho.png" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <span class="text-xs uppercase text-primary font-bold tracking-widest mb-2 block">Styling</span>
-                    <h3 class="text-2xl font-serif mb-4 hover:text-primary transition-colors cursor-pointer">Art of Charcuterie: Professional Plating</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm line-clamp-2">Learn how to create restaurant-quality boards that look as good as they taste for your guests...</p>
-                    <a href="gallery.html" class="flex items-center space-x-2 text-primary font-bold uppercase text-xs tracking-widest group">
-                        <span>Read More</span>
-                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
+                    <span class="text-xs uppercase text-primary font-bold tracking-widest mb-2 block w-full">Styling</span>
+                    <h3 class="text-2xl font-serif mb-4 hover:text-primary transition-colors cursor-pointer mx-auto">Art of Charcuterie: Professional Plating</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm line-clamp-2 mx-auto max-w-md">Learn how to create restaurant-quality boards that look as good as they taste for your guests...</p>
+                    <div class="mt-auto">
+                        <a href="gallery.html" class="inline-flex items-center space-x-2 text-primary font-bold uppercase text-xs tracking-widest group">
+                            <span>Read More</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
                 </article>
-                <article class="group">
-                    <div class="overflow-hidden rounded-xl mb-6 relative">
+                <article class="group text-center flex flex-col h-full">
+                    <div class="overflow-hidden rounded-xl mb-6 relative w-full">
                         <img src="assets/contact-hero.png" class="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500">
                     </div>
-                    <span class="text-xs uppercase text-primary font-bold tracking-widest mb-2 block">Events</span>
-                    <h3 class="text-2xl font-serif mb-4 hover:text-primary transition-colors cursor-pointer">Planning the Perfect Pop-Up Proposal</h3>
-                    <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm line-clamp-2">The ultimate checklist to ensure your big question is met with a resounding 'Yes' and zero stress...</p>
-                    <a href="gallery.html" class="flex items-center space-x-2 text-primary font-bold uppercase text-xs tracking-widest group">
-                        <span>Read More</span>
-                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                    </a>
+                    <span class="text-xs uppercase text-primary font-bold tracking-widest mb-2 block w-full">Events</span>
+                    <h3 class="text-2xl font-serif mb-4 hover:text-primary transition-colors cursor-pointer mx-auto">Planning the Perfect Pop-Up Proposal</h3>
+                    <p class="text-gray-500 dark:text-gray-400 mb-6 text-sm line-clamp-2 mx-auto max-w-md">The ultimate checklist to ensure your big question is met with a resounding 'Yes' and zero stress...</p>
+                    <div class="mt-auto">
+                        <a href="gallery.html" class="inline-flex items-center space-x-2 text-primary font-bold uppercase text-xs tracking-widest group">
+                            <span>Read More</span>
+                            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                        </a>
+                    </div>
                 </article>
             </div>
         </div>
@@ -308,7 +348,7 @@
                 <h4 class="font-serif text-lg mb-6">Quick Links</h4>
                 <ul class="space-y-4 text-gray-500 dark:text-gray-400 text-sm">
                     <li><a href="about.html" class="hover:text-primary transition-all">Our Story</a></li>
-                    <li><a href="#services" class="hover:text-primary transition-all">Experiences</a></li>
+                    <li><a href="pricing.html" class="hover:text-primary transition-all">Pricing & Packages</a></li>
                     <li><a href="gallery.html" class="hover:text-primary transition-all">Journal</a></li>
                     <li><a href="dashboard.html" class="hover:text-primary transition-all">Book Online</a></li>
                 </ul>
@@ -316,10 +356,10 @@
             <div>
                 <h4 class="font-serif text-lg mb-6">Experience Types</h4>
                 <ul class="space-y-4 text-gray-500 dark:text-gray-400 text-sm">
-                    <li><a href="#" class="hover:text-primary transition-all">Boho Picnic</a></li>
-                    <li><a href="#" class="hover:text-primary transition-all">Proposal Surprise</a></li>
-                    <li><a href="#" class="hover:text-primary transition-all">Birthday Soirée</a></li>
-                    <li><a href="#" class="hover:text-primary transition-all">Corporate Outing</a></li>
+                    <li><a href="pricing.html" class="hover:text-primary transition-all">Boho Picnic</a></li>
+                    <li><a href="pricing.html" class="hover:text-primary transition-all">Proposal Surprise</a></li>
+                    <li><a href="pricing.html" class="hover:text-primary transition-all">Birthday Soirée</a></li>
+                    <li><a href="pricing.html" class="hover:text-primary transition-all">Corporate Outing</a></li>
                 </ul>
             </div>
             <div>

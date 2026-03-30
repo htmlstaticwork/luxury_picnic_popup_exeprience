@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picnique Luxury Experiences | Pricing</title>
+    <!-- Tailwind CSS 3 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#D4AF37',
+                        secondary: '#FFF9F5',
+                        accent: '#F8D7DA',
+                        'text-dark': '#2D241E',
+                        'text-light': '#F5F5F5',
+                    },
+                    fontFamily: {
+                        serif: ['Playfair Display', 'serif'],
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body class="bg-secondary dark:bg-[#1A1A1A] text-text-dark dark:text-text-light pt-24">
+
+    <!-- Header Section -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300">
+        <nav class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-2 group shrink-0">
+                <img src="assets/favicon.svg" alt="Picnique Logo" class="h-10 w-10 object-contain group-hover:scale-110 transition-transform">
+                <span class="font-serif text-2xl font-bold text-primary tracking-tight logo-text">Picnique</span>
+            </a>
+
+            <div class="hidden xl:flex items-center space-x-4 lg:space-x-6 xl:space-x-10 text-sm font-bold uppercase tracking-widest whitespace-nowrap">
+                <a href="index.html" class="hover:text-primary transition-all">Home 1</a>
+                <a href="home2.html" class="hover:text-primary transition-all">Home 2</a>
+                <a href="about.html" class="hover:text-primary transition-all">About</a>
+                <a href="gallery.html" class="hover:text-primary transition-all">Gallery</a>
+                <a href="pricing.html" class="text-primary relative after:content-[''] after:absolute after:-bottom-2 after:left-0 after:w-full after:h-[1px] after:bg-primary transition-all">Pricing</a>
+                <a href="contact.html" class="hover:text-primary transition-all">Contact</a>
+                <a href="dashboard.html" class="hover:text-primary transition-all">Dashboard</a>
+            </div>
+
+            <div class="flex items-center space-x-4 lg:space-x-4">
+                <div class="hidden xl:flex items-center space-x-6 border-r border-gray-200 dark:border-white/10 pr-6 mr-2">
+                    <a href="signup.html" class="px-6 py-2.5 bg-primary text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-full hover:shadow-xl hover:shadow-primary/20 hover:-translate-y-0.5 transition-all whitespace-nowrap">Sign Up</a>
+                </div>
+                <button id="theme-toggle" class="theme-toggle hidden xl:block p-2 hover:text-primary transition-colors">
+                    <!-- Icon auto-populated by JS -->
+                </button>
+                <button id="rtl-toggle" class="rtl-toggle hidden xl:block px-3 py-1 text-xs border border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-all uppercase font-semibold">
+                    RTL
+                </button>
+                <button id="menu-btn" class="xl:hidden p-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Mobile Navigation Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 dark:bg-black/95 z-[60] flex flex-col items-center justify-start py-20 overflow-y-auto space-y-6 text-xl font-serif translate-x-full transition-transform duration-500 xl:hidden font-sans">
+        <button id="menu-close" class="absolute top-8 right-8 p-2">
+            <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
+        <a href="index.html" class="mobile-link">Home 1</a>
+        <a href="home2.html" class="mobile-link">Home 2</a>
+        <a href="about.html" class="mobile-link">About</a>
+        <a href="gallery.html" class="mobile-link">Gallery</a>
+        <a href="pricing.html" class="mobile-link text-primary">Pricing</a>
+        <a href="contact.html" class="mobile-link">Contact</a>
+        <a href="dashboard.html" class="mobile-link">Dashboard</a>
+        
+        <!-- Toggles (Mobile View) -->
+        <div class="flex items-center space-x-6 py-4">
+            <button class="theme-toggle p-2 hover:text-primary transition-colors"></button>
+            <button class="rtl-toggle px-4 py-1.5 text-sm border border-primary text-primary rounded-full uppercase font-semibold">RTL</button>
+        </div>
+        <div class="pt-8 flex flex-col items-center space-y-4">
+            <a href="signup.html" class="px-8 py-3 bg-primary text-white rounded-full text-lg font-sans w-full text-center mt-4">Sign Up</a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="relative h-[60vh] flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 bg-black/50 z-10"></div>
+        <img src="assets/feature-pricing.png" onerror="this.src='assets/home2-hero.png'" alt="Pricing Packages" class="absolute inset-0 w-full h-full object-cover">
+        
+        <div class="relative z-20 text-center text-white px-6">
+            <span class="inline-block py-1 px-4 border border-white/40 rounded-full text-xs tracking-widest uppercase mb-4 backdrop-blur-sm">Curated Excellence</span>
+            <h1 class="text-5xl md:text-7xl font-serif mb-4 leading-tight">Investment in <span class="italic text-primary">Memories</span></h1>
+            <p class="text-lg text-white/90 max-w-2xl mx-auto font-light">Explore our carefully crafted experience tiers, designed to turn any occasion into something truly unforgettable.</p>
+        </div>
+    </section>
+
+    <!-- Pricing Tiers Section -->
+    <section class="py-24 bg-secondary dark:bg-[#1A1A1A]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 lg:justify-center">
+                
+                <!-- Tier 1 -->
+                <div class="group bg-white dark:bg-[#252525] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-transparent hover:border-primary/30 flex flex-col">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="assets/pricing_tier1.png" alt="The Petit Retreat" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 bg-white/90 dark:bg-black/80 px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">Popular</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-serif mb-2">The Petit Retreat</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">An intimate setting designed for two, perfect for date nights and anniversaries.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-serif text-primary">$195</span>
+                            <span class="text-sm text-gray-400"> / 2 hours</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-1 text-sm font-medium">
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Setup & Cleanup Included</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Custom Low Picnic Table</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Assorted Cushions & Blankets</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Bluetooth Speaker</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Complimentary Sparkling Water</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block w-full text-center py-4 border border-primary text-primary hover:bg-primary hover:text-white rounded-full transition-colors uppercase tracking-widest text-xs font-bold">Book Experience</a>
+                    </div>
+                </div>
+
+                <!-- Tier 2 -->
+                <div class="group bg-white dark:bg-[#252525] rounded-3xl overflow-hidden shadow-2xl hover:-translate-y-2 transition-all duration-300 border-2 border-primary relative flex flex-col md:-mt-8 md:mb-8">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-1.5 rounded-b-xl text-xs font-bold tracking-widest uppercase z-20 shadow-md">Premium Choice</div>
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="assets/pricing_tier2.png" alt="Boho Bliss" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col bg-gradient-to-b from-transparent to-primary/5 dark:to-primary/10">
+                        <h3 class="text-3xl font-serif mb-2">Boho Bliss</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">A slightly larger gathering with elevated decor, ideal for double dates.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-serif text-primary">$325</span>
+                            <span class="text-sm text-gray-400"> / 2.5 hours</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-1 text-sm font-medium">
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Up to 4 Guests</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Everything in The Petit Retreat</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Lace Teepee or Fringed Umbrella</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Gourmet Charcuterie Board</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Fairy Lights & Lanterns</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block w-full text-center py-4 bg-primary text-white hover:bg-[#b5952f] rounded-full transition-colors uppercase tracking-widest text-xs font-bold shadow-lg shadow-primary/30">Book Experience</a>
+                    </div>
+                </div>
+
+                <!-- Tier 3 -->
+                <div class="group bg-white dark:bg-[#252525] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-transparent hover:border-primary/30 flex flex-col">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="assets/pricing_tier3.png" alt="The Grand Soirée" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-serif mb-2">The Grand Soirée</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">Unrivaled luxury for larger groups, complete with a breathtaking canopy.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-serif text-primary">$595</span>
+                            <span class="text-sm text-gray-400"> / 3 hours</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-1 text-sm font-medium">
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Up to 8 Guests</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Large Canvas Bell Tent</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Lush Fresh Floral Arrangements</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Premium Glassware & Linen</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Dedicated Host on Standby</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block w-full text-center py-4 border border-primary text-primary hover:bg-primary hover:text-white rounded-full transition-colors uppercase tracking-widest text-xs font-bold">Book Experience</a>
+                    </div>
+                </div>
+
+                <!-- Tier 4 -->
+                <div class="group bg-white dark:bg-[#252525] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-transparent hover:border-primary/30 flex flex-col">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="assets/pricing_tier4.png" alt="The Proposal Setup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-serif mb-2">The Proposal Setup</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">A curated, highly romantic atmosphere designed to make the question unforgettable.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-serif text-primary">$495</span>
+                            <span class="text-sm text-gray-400"> / 2 hours</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-1 text-sm font-medium">
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Glowing "Marry Me" Signage</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Scattered Red Rose Petals</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Premium Champagne Setup</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Hidden Photography Options</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block w-full text-center py-4 border border-primary text-primary hover:bg-primary hover:text-white rounded-full transition-colors uppercase tracking-widest text-xs font-bold">Inquire Now</a>
+                    </div>
+                </div>
+
+                <!-- Tier 5 -->
+                <div class="group bg-white dark:bg-[#252525] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-transparent hover:border-primary/30 flex flex-col">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="assets/pricing_tier5.png" alt="Corporate Escape" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-serif mb-2">Corporate Escape</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">A sprawling luxury installation created to bring teams together in the fresh air.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-serif text-primary">From $995</span>
+                            <span class="text-sm text-gray-400"> / 4 hours</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-1 text-sm font-medium">
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Groups of 10 to 30+</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Multiple Long Table Setups</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Catered Gourmet Grazing Stations</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block w-full text-center py-4 border border-primary text-primary hover:bg-primary hover:text-white rounded-full transition-colors uppercase tracking-widest text-xs font-bold">Contact Concierge</a>
+                    </div>
+                </div>
+
+                <!-- Tier 6: Twilight Serenade -->
+                <div class="group bg-white dark:bg-[#252525] rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 border border-transparent hover:border-primary/30 flex flex-col">
+                    <div class="h-64 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=1024&auto=format&fit=crop" alt="Twilight Serenade" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+                        <div class="absolute top-4 right-4 bg-primary text-white px-4 py-1 rounded-full text-xs font-bold tracking-widest uppercase">New</div>
+                    </div>
+                    <div class="p-8 flex-1 flex flex-col">
+                        <h3 class="text-3xl font-serif mb-2">Twilight Serenade</h3>
+                        <p class="text-gray-500 dark:text-gray-400 text-sm mb-6">Experience the magic of dusk with specialized lighting and a premium seafood spread.</p>
+                        <div class="mb-6">
+                            <span class="text-4xl font-serif text-primary">$445</span>
+                            <span class="text-sm text-gray-400"> / 2.5 hours</span>
+                        </div>
+                        <ul class="space-y-4 mb-8 flex-1 text-sm font-medium">
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Deluxe Twilight Lighting Package</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Premium Seafood Platter Upgrade</span>
+                            </li>
+                            <li class="flex items-start space-x-3">
+                                <svg class="w-5 h-5 text-primary shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                                <span>Chilled Champagne Bucket</span>
+                            </li>
+                        </ul>
+                        <a href="contact.html" class="block w-full text-center py-4 border border-primary text-primary hover:bg-primary hover:text-white rounded-full transition-colors uppercase tracking-widest text-xs font-bold">Book Experience</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Add-ons Section -->
+    <section class="py-20 bg-white dark:bg-[#151515] border-t border-gray-100 dark:border-white/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-12 text-center">
+                <h2 class="text-4xl md:text-5xl font-serif mb-4">Curate Your Extras</h2>
+                <div class="w-20 h-1 bg-primary mx-auto mb-6"></div>
+                <p class="text-gray-500 max-w-2xl mx-auto italic">Enhance your experience with these luxurious additions.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="p-6 rounded-2xl bg-secondary dark:bg-[#1A1A1A] flex items-center justify-between group hover:shadow-lg transition-all border border-transparent hover:border-primary/20">
+                    <div>
+                        <h4 class="font-bold text-lg">Polaroid Camera</h4>
+                        <p class="text-sm text-gray-500">Includes 20 films</p>
+                    </div>
+                    <span class="text-xl font-serif text-primary">+$45</span>
+                </div>
+                <div class="p-6 rounded-2xl bg-secondary dark:bg-[#1A1A1A] flex items-center justify-between group hover:shadow-lg transition-all border border-transparent hover:border-primary/20">
+                    <div>
+                        <h4 class="font-bold text-lg">Extra Hour</h4>
+                        <p class="text-sm text-gray-500">Extend the magic</p>
+                    </div>
+                    <span class="text-xl font-serif text-primary">+$50</span>
+                </div>
+                <div class="p-6 rounded-2xl bg-secondary dark:bg-[#1A1A1A] flex items-center justify-between group hover:shadow-lg transition-all border border-transparent hover:border-primary/20">
+                    <div>
+                        <h4 class="font-bold text-lg">Donut Wall</h4>
+                        <p class="text-sm text-gray-500">Includes 12 gourmet donuts</p>
+                    </div>
+                    <span class="text-xl font-serif text-primary">+$65</span>
+                </div>
+                <div class="p-6 rounded-2xl bg-secondary dark:bg-[#1A1A1A] flex items-center justify-between group hover:shadow-lg transition-all border border-transparent hover:border-primary/20">
+                    <div>
+                        <h4 class="font-bold text-lg">Custom Cake</h4>
+                        <p class="text-sm text-gray-500">By our patisserie partner</p>
+                    </div>
+                    <span class="text-xl font-serif text-primary">+$85</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-50 dark:bg-[#111111] text-[#2D241E] dark:text-white py-16 px-6 border-t border-gray-100 dark:border-white/5 transition-colors duration-300">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+            <div class="space-y-6">
+                <a href="index.html" class="flex items-center space-x-2">
+                    <img src="assets/favicon.svg" alt="Picnique Logo" class="h-8 w-8">
+                    <span class="font-serif text-xl font-bold text-primary tracking-tight">Picnique</span>
+                </a>
+                <p class="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
+                    Crafting extraordinary moments in nature's most beautiful corners. Luxury redefined through curated picnic experiences.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="#" class="p-2 bg-gray-200 dark:bg-white/5 rounded-full hover:bg-primary hover:text-white transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                    </a>
+                    <a href="#" class="p-2 bg-gray-200 dark:bg-white/5 rounded-full hover:bg-primary hover:text-white transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.901 1.153h3.68l-8.04 9.19L24 22.846h-7.406l-5.8-7.584-6.638 7.584H.474l8.6-9.83L0 1.154h7.594l5.243 6.932 6.064-6.932zm-1.292 19.49h2.039L6.486 3.24H4.298l13.311 17.403z"/></svg>
+                    </a>
+                    <a href="#" class="p-2 bg-gray-200 dark:bg-white/5 rounded-full hover:bg-primary hover:text-white transition-all">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-serif text-lg mb-6">Quick Links</h4>
+                <ul class="space-y-4 text-gray-500 dark:text-gray-400 text-sm">
+                    <li><a href="about.html" class="hover:text-primary transition-all">Our Story</a></li>
+                    <li><a href="pricing.html" class="hover:text-primary transition-all">Pricing & Packages</a></li>
+                    <li><a href="gallery.html" class="hover:text-primary transition-all">Journal</a></li>
+                    <li><a href="dashboard.html" class="hover:text-primary transition-all">Book Online</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-lg mb-6">Experience Types</h4>
+                <ul class="space-y-4 text-gray-500 dark:text-gray-400 text-sm">
+                    <li><a href="pricing.html" class="hover:text-primary transition-all">Boho Picnic</a></li>
+                    <li><a href="pricing.html" class="hover:text-primary transition-all">Proposal Surprise</a></li>
+                    <li><a href="pricing.html" class="hover:text-primary transition-all">Birthday Soirée</a></li>
+                    <li><a href="pricing.html" class="hover:text-primary transition-all">Corporate Outing</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-serif text-lg mb-6">Contact Us</h4>
+                <ul class="space-y-4 text-gray-500 dark:text-gray-400 text-sm">
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        <span>hello@picnicpopup.com</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                        <span>Laguna Beach, CA</span>
+                    </li>
+                    <li class="pt-2">
+                        <span class="text-xs uppercase tracking-widest text-primary">Office Hours:</span>
+                        <p class="mt-1">Mon - Sat: 9am - 7pm</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto border-t border-gray-200 dark:border-white/5 mt-16 pt-8 text-center text-xs text-gray-400 uppercase tracking-[0.2em]">
+            &copy; 2026 Picnique Experiences. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Scroll To Top Button -->
+    <button id="scroll-top" class="fixed bottom-8 right-8 bg-primary p-3 rounded-full text-white shadow-2xl z-50 hover:-translate-y-2 transition-transform">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 11l7-7 7 7M5 19l7-7 7 7"></path></svg>
+    </button>
+
+    <!-- Shared Scripts -->
+    <script src="main.js"></script>
+</body>
+</html>
