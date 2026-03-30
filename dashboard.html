@@ -60,15 +60,22 @@
 </head>
 <body class="font-sans bg-secondary dark:bg-dark-bg text-dark-bg dark:text-white transition-colors duration-300">
 
+    <!-- Sidebar Backdrop for Mobile -->
+    <div id="sidebar-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden transition-opacity duration-300 opacity-0"></div>
+
     <!-- Mobile Menu Button -->
     <div class="lg:hidden p-4 flex justify-between items-center bg-sidebar-bg border-b border-white/5">
         <a href="index.html" class="flex items-center space-x-3">
             <img src="assets/favicon.svg" class="h-8 w-8">
             <span class="font-serif font-bold text-primary tracking-widest uppercase">Picnique</span>
         </a>
-        <button id="mobile-sidebar-toggle" class="p-2 text-white">
-            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
-        </button>
+        <div class="flex items-center space-x-3">
+            <button id="theme-toggle" class="theme-toggle p-2 bg-white/10 rounded-lg text-primary"></button>
+            <button id="rtl-toggle" class="rtl-toggle px-3 py-1 bg-white/10 rounded-lg text-[10px] font-black text-primary">RTL</button>
+            <button id="mobile-sidebar-toggle" class="p-2 text-white">
+                <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+            </button>
+        </div>
     </div>
 
     <div class="flex min-h-screen">
@@ -134,7 +141,7 @@
         </aside>
 
         <!-- Main Content (Dashboard) -->
-        <main class="flex-1 lg:ml-64 p-6 lg:p-12">
+        <main class="flex-1 lg:ml-64 w-full min-w-0 p-4 md:p-8 lg:p-12 overflow-x-hidden">
             <!-- Header Area -->
             <div class="flex flex-col md:flex-row md:items-center justify-between mb-12 space-y-6 md:space-y-0">
                 <div class="flex items-center space-x-6">
@@ -147,8 +154,8 @@
                     </div>
                 </div>
                 <div class="flex items-center space-x-4">
-                    <button id="theme-toggle" class="theme-toggle hidden xl:block p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all flex items-center justify-center min-w-[48px] min-h-[48px]"></button>
-                    <button id="rtl-toggle" class="rtl-toggle hidden xl:block p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all text-[10px] font-black uppercase tracking-widest min-w-[48px] min-h-[48px]">RTL</button>
+                    <button id="theme-toggle" class="theme-toggle hidden lg:flex p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all items-center justify-center min-w-[48px] min-h-[48px]"></button>
+                    <button id="rtl-toggle" class="rtl-toggle hidden lg:block p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all text-[10px] font-black uppercase tracking-widest min-w-[48px] min-h-[48px]">RTL</button>
                 </div>
             </div>
 
@@ -213,7 +220,7 @@
                 </div>
 
                 <!-- Curation Milestones Area (Timeline) -->
-                <div class="bg-white dark:bg-card-bg rounded-[3rem] border border-gray-100 dark:border-white/5 p-8 md:p-12 shadow-sm dark:shadow-none">
+                <div class="bg-white dark:bg-card-bg rounded-[2rem] md:rounded-[3rem] border border-gray-100 dark:border-white/5 p-6 md:p-12 shadow-sm dark:shadow-none">
                     <div class="flex items-center space-x-4 mb-10 pb-6 border-b border-gray-100 dark:border-white/5">
                         <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
                         <h3 class="text-2xl font-serif italic">Planning Milestones</h3>
@@ -305,8 +312,8 @@
                     <h2 class="text-4xl font-serif italic mb-2">Event Logistics</h2>
                     <p class="text-gray-500">Secure your date and preferred sanctuary.</p>
                 </div>
-                <div class="bg-white dark:bg-card-bg p-12 rounded-[3.5rem] border border-gray-100 dark:border-white/5 shadow-sm dark:shadow-none">
-                    <form class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                <div class="bg-white dark:bg-card-bg p-6 md:p-12 rounded-[2rem] md:rounded-[3.5rem] border border-gray-100 dark:border-white/5 shadow-sm dark:shadow-none">
+                    <form class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10">
                         <div class="space-y-4">
                             <label class="text-[10px] font-black uppercase tracking-widest text-primary">Preferred Date</label>
                             <input type="date" class="w-full bg-gray-50 dark:bg-dark-bg border border-gray-100 dark:border-white/10 rounded-2xl p-4 text-dark-bg dark:text-white focus:border-primary outline-none">
@@ -319,11 +326,11 @@
                                 <option>Gala (11+ Guests)</option>
                             </select>
                         </div>
-                        <div class="space-y-4 md:col-span-2">
+                        <div class="space-y-4 lg:col-span-2">
                             <label class="text-[10px] font-black uppercase tracking-widest text-primary">Special Celebration Details</label>
                             <textarea placeholder="Tell us about the occasion..." class="w-full bg-gray-50 dark:bg-dark-bg border border-gray-100 dark:border-white/10 rounded-2xl p-6 text-dark-bg dark:text-white focus:border-primary outline-none h-40"></textarea>
                         </div>
-                        <button class="md:col-span-2 py-5 bg-primary text-white font-black uppercase tracking-[0.2em] rounded-full hover:shadow-2xl transition-all">Check Availability</button>
+                        <button class="lg:col-span-2 py-5 bg-primary text-white font-black uppercase tracking-[0.2em] rounded-full hover:shadow-2xl transition-all">Check Availability</button>
                     </form>
                 </div>
             </div>
@@ -340,7 +347,7 @@
                 
                 <div class="space-y-6">
                     <!-- Appetizer Category -->
-                    <div class="bg-white dark:bg-card-bg p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 group hover:border-primary/30 transition-all shadow-sm dark:shadow-none">
+                    <div class="bg-white dark:bg-card-bg p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] border border-gray-100 dark:border-white/5 group hover:border-primary/30 transition-all shadow-sm dark:shadow-none">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-6">
                                 <div class="w-16 h-16 rounded-2xl bg-gray-50 dark:bg-dark-bg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
@@ -357,7 +364,7 @@
                         </div>
                     </div>
                     <!-- Main Category -->
-                    <div class="bg-white dark:bg-card-bg p-8 rounded-[2.5rem] border border-gray-100 dark:border-white/5 group hover:border-primary/30 transition-all shadow-sm dark:shadow-none">
+                    <div class="bg-white dark:bg-card-bg p-6 md:p-8 rounded-[2rem] md:rounded-[2.5rem] border border-gray-100 dark:border-white/5 group hover:border-primary/30 transition-all shadow-sm dark:shadow-none">
                         <div class="flex items-center justify-between">
                             <div class="flex items-center space-x-6">
                                 <div class="w-16 h-16 rounded-2xl bg-gray-50 dark:bg-dark-bg flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
@@ -436,9 +443,9 @@
                     </div>
 
                     <!-- Security -->
-                    <div class="bg-white dark:bg-card-bg p-10 rounded-[2.5rem] border border-gray-100 dark:border-white/5 xl:col-span-2 shadow-sm dark:shadow-none">
+                    <div class="bg-white dark:bg-card-bg p-6 md:p-10 rounded-[2rem] md:rounded-[2.5rem] border border-gray-100 dark:border-white/5 xl:col-span-2 shadow-sm dark:shadow-none">
                         <h3 class="text-xl font-serif italic mb-8 pb-4 border-b border-gray-100 dark:border-white/5">Security & Access</h3>
-                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-8">
+                        <div class="flex flex-col md:flex-row md:items-center justify-between gap-6 md:gap-8">
                             <p class="text-sm text-gray-500 dark:text-gray-400">Your password was last changed <span class="text-dark-bg dark:text-white font-bold">42 days ago</span>.</p>
                             <button class="px-8 py-3 bg-gray-50 dark:bg-white/5 border border-gray-200 dark:border-white/10 rounded-full text-xs font-black uppercase tracking-widest hover:bg-primary hover:text-white hover:border-primary transition-all text-dark-bg dark:text-white">Update Password</button>
                         </div>
@@ -449,6 +456,33 @@
 
     <script src="main.js"></script>
     <script>
+        const sidebar = document.getElementById('sidebar');
+        const backdrop = document.getElementById('sidebar-backdrop');
+        const mobileToggle = document.getElementById('mobile-sidebar-toggle');
+
+        function toggleSidebar() {
+            const isHidden = sidebar.classList.contains('-translate-x-full');
+            if (isHidden) {
+                openSidebar();
+            } else {
+                closeSidebar();
+            }
+        }
+
+        function openSidebar() {
+            sidebar.classList.remove('-translate-x-full');
+            backdrop.classList.remove('hidden');
+            setTimeout(() => backdrop.classList.add('opacity-100'), 10);
+        }
+
+        function closeSidebar() {
+            if (!sidebar.classList.contains('-translate-x-full')) {
+                sidebar.classList.add('-translate-x-full');
+                backdrop.classList.remove('opacity-100');
+                setTimeout(() => backdrop.classList.add('hidden'), 300);
+            }
+        }
+
         function switchTab(tabId) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.sidebar-link').forEach(link => {
@@ -466,21 +500,38 @@
                 targetBtn.classList.add('active');
                 targetBtn.classList.remove('opacity-60');
             }
+
+            // Auto-close sidebar on mobile/tablet after selection
+            if (window.innerWidth < 1024) {
+                closeSidebar();
+            }
         }
 
-        // Mobile Sidebar Toggle
-        const sidebar = document.getElementById('sidebar');
-        const mobileToggle = document.getElementById('mobile-sidebar-toggle');
         if (mobileToggle) {
-            mobileToggle.addEventListener('click', () => {
-                sidebar.classList.toggle('-translate-x-full');
-            });
+            mobileToggle.addEventListener('click', toggleSidebar);
+        }
+        if (backdrop) {
+            backdrop.addEventListener('click', toggleSidebar);
         }
 
-        // Auto-close on resize
+        // Close sidebar when any sidebar link is clicked (excluding system toggles)
+        sidebar.querySelectorAll('a, button').forEach(item => {
+            if (item.classList.contains('theme-toggle') || item.classList.contains('rtl-toggle')) return;
+            item.addEventListener('click', () => {
+                if (window.innerWidth < 1024) {
+                    closeSidebar();
+                }
+            });
+        });
+
+        // Auto-close/open on resize
         window.addEventListener('resize', () => {
             if (window.innerWidth >= 1024) {
                 sidebar.classList.remove('-translate-x-full');
+                backdrop.classList.add('hidden');
+                backdrop.classList.remove('opacity-100');
+            } else {
+                sidebar.classList.add('-translate-x-full');
             }
         });
     </script>
