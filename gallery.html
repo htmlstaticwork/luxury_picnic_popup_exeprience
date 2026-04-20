@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr" class="scroll-smooth">
+<html lang="en" dir="ltr" class="scroll-smooth overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
@@ -50,7 +50,7 @@
     </style>
 </head>
 
-<body class="bg-white dark:bg-[#1A1A1A] text-text-dark dark:text-text-light font-sans">
+<body class="overflow-x-hidden bg-white dark:bg-[#1A1A1A] text-text-dark dark:text-text-light font-sans">
 
     <!-- Header -->
     <header class="fixed top-0 w-full z-50 transition-all duration-300">
@@ -79,6 +79,9 @@
                 </div>
                 <button id="theme-toggle" class="theme-toggle hidden xl:block p-2 hover:text-primary transition-colors"></button>
                 <button id="rtl-toggle" class="rtl-toggle hidden xl:block px-3 py-1 text-xs border border-primary text-primary rounded-full uppercase font-semibold">RTL</button>
+                <button id="menu-btn" class="xl:hidden p-2">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
+                </button>
             </div>
         </nav>
     </header>
@@ -109,7 +112,7 @@
                 class="absolute inset-0 w-full h-full object-cover brightness-[0.3] scale-110 animate-[kenburns_30s_linear_infinite]">
             <div class="relative z-10">
                 <span class="text-xs uppercase tracking-[0.8em] text-primary mb-12 block font-black">Presenting</span>
-                <h1 class="text-5xl md:text-[7rem] font-serif italic leading-none mb-12 max-w-6xl text-white">
+                <h1 class="text-4xl md:text-[7rem] font-serif italic leading-none mb-12 max-w-6xl text-white">
                     The Art of <br> <span class="text-primary not-italic font-black uppercase tracking-tighter">Slow
                         Living</span>
                 </h1>
@@ -263,10 +266,7 @@
                         handled everything perfectly so I could focus on the moment."</p>
                     <cite class="text-xs uppercase tracking-widest font-black opacity-40">— James L., Member</cite>
                 </div>
-            </div>
         </div>
-        </div>
-        </section>
 
         <!-- Invitation Section -->
         <section class="py-12 bg-primary text-white text-center">

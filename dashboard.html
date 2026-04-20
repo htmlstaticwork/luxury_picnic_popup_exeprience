@@ -64,15 +64,15 @@
     <div id="sidebar-backdrop" class="fixed inset-0 bg-black/50 z-40 hidden lg:hidden transition-opacity duration-300 opacity-0"></div>
 
     <!-- Mobile Menu Button -->
-    <div class="lg:hidden p-4 flex justify-between items-center bg-sidebar-bg border-b border-white/5">
-        <a href="index.html" class="flex items-center space-x-3">
-            <img src="assets/favicon.svg" class="h-8 w-8">
-            <span class="font-serif font-bold text-primary tracking-widest uppercase">Picnique</span>
+    <div class="lg:hidden px-6 py-4 flex justify-between items-center bg-secondary dark:bg-[#1A1A1A] border-b border-gray-100 dark:border-white/5 text-dark-bg dark:text-white transition-colors duration-300 z-50 relative">
+        <a href="index.html" class="flex items-center space-x-2 group shrink-0">
+            <img src="assets/favicon.svg" alt="Logo" class="h-10 w-10 object-contain">
+            <span class="font-serif text-2xl font-bold text-primary tracking-tight">Picnique</span>
         </a>
-        <div class="flex items-center space-x-3">
-            <button id="theme-toggle" class="theme-toggle p-2 bg-white/10 rounded-lg text-primary"></button>
-            <button id="rtl-toggle" class="rtl-toggle px-3 py-1 bg-white/10 rounded-lg text-[10px] font-black text-primary">RTL</button>
-            <button id="mobile-sidebar-toggle" class="p-2 text-white">
+        <div class="flex items-center space-x-4">
+            <button class="theme-toggle p-2 hover:text-primary transition-colors"></button>
+            <button class="rtl-toggle px-3 py-1 text-xs border border-primary text-primary rounded-full uppercase font-semibold">RTL</button>
+            <button id="mobile-sidebar-toggle" class="p-2">
                 <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
             </button>
         </div>
@@ -153,9 +153,9 @@
                         <span class="inline-block mt-1 px-3 py-0.5 bg-primary/10 text-primary text-[10px] font-black uppercase tracking-widest rounded-full">Active Planning</span>
                     </div>
                 </div>
-                <div class="flex items-center space-x-4">
-                    <button id="theme-toggle" class="theme-toggle hidden lg:flex p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all items-center justify-center min-w-[48px] min-h-[48px]"></button>
-                    <button id="rtl-toggle" class="rtl-toggle hidden lg:block p-3 bg-gray-100 dark:bg-white/5 rounded-2xl text-gray-500 dark:text-gray-400 hover:text-primary dark:hover:text-white transition-all text-[10px] font-black uppercase tracking-widest min-w-[48px] min-h-[48px]">RTL</button>
+                <div class="flex items-center space-x-4 lg:space-x-6">
+                    <button class="theme-toggle hidden lg:block p-2 hover:text-primary transition-colors"></button>
+                    <button class="rtl-toggle hidden lg:block px-3 py-1 text-xs border border-primary text-primary rounded-full uppercase font-semibold">RTL</button>
                 </div>
             </div>
 
